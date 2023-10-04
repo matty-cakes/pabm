@@ -1,4 +1,4 @@
-# Pretty Algorithms By Matt
+# Pretty Algorithms By Matt ✨
 
 ## What is this?
 
