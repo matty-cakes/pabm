@@ -33,7 +33,9 @@ https://pabm.fly.dev/
 
 ## How do you test it?
 
-- 🤦‍♂️
+- Be able to develop it
+- Test it (`pn test`)
+- Track coverage for it (`pn coverage`)
 
 ## How do you deploy to prod?
 

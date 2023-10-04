@@ -10,4 +10,7 @@ export default defineConfig({
   css: {
     postcss,
   },
+  test: {
+    reporters: [["default"], ["html", { outputFile: ".html" }]],
+  },
 })
