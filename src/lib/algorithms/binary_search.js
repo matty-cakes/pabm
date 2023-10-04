@@ -2,7 +2,11 @@ const DEBUG = false
 const debug_log = (v) => (DEBUG ? console.log(v) : null)
 
 const get_half_way_index = (l, window_open, window_close) => {
-  if (l.length && l.length > 1) {
+  if (l.length) {
+    if (l.length === 1) {
+      return 0
+    }
+
     let mid = Math.floor((window_open + window_close) / 2)
     debug_log(
       `The mid point of (${window_open} + ${window_close} = ${
@@ -10,8 +14,6 @@ const get_half_way_index = (l, window_open, window_close) => {
       }) is ${mid}`
     )
     return mid
-  } else if (l.length === 1) {
-    return l[0]
   }
 }
 
