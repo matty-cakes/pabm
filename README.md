@@ -30,3 +30,13 @@ https://pabm.fly.dev/
 - Install deps (`pn install`)
 - Run dev server (`pn dev`)
 - Develop 👾
+
+## How do you test it?
+
+- 🤦‍♂️
+
+## How do you deploy to prod?
+
+- Be able to develop it
+- Have `flyctl` and be logged in
+- Deploy it `pn prod-deploy`
