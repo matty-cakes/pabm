@@ -1,4 +1,4 @@
-const DEBUG = true
+const DEBUG = false
 const debug_log = (v) => (DEBUG ? console.log(v) : null)
 
 const get_half_way_index = (l, window_open, window_close) => {
