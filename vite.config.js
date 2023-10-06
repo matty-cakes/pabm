@@ -6,6 +6,7 @@ export default defineConfig({
   server: {
     hmr: true,
   },
+  publicDir: "src/public",
   plugins: [svelte({})],
   css: {
     postcss,

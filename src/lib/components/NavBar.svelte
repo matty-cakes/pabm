@@ -11,7 +11,7 @@
       href="/"
     >
       <h2 class="ml-3 text-2xl">
-        <img class="max-h-9" src="/src/public/pretty-robot.png" alt="" />
+        <img class="max-h-9" src="/pretty-robot.png" alt="" />
       </h2>
     </a>
     <nav class="flex flex-wrap items-center justify-center">

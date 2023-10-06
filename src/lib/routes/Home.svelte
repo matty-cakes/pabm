@@ -9,11 +9,7 @@
   >
     <div class="flex align-middle">
       <h1 class="text-4xl self-end mr-4">PABM</h1>
-      <img
-        class="inline max-h-12"
-        src="/src/public/pretty-robot.png"
-        alt="pretty-robot"
-      />
+      <img class="inline max-h-12" src="/pretty-robot.png" alt="pretty-robot" />
     </div>
 
     <small>Pretty Alogorithms By Matt</small>
