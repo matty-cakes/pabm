@@ -59,7 +59,7 @@
 <div>
   <div
     id="introduction"
-    class="w-full mb-7 mt-5 py-6 px-3 rounded-lg bg-slate-200 shadow-md hover:shadow-lg"
+    class="w-full mb-7 mt-5 py-6 px-3 rounded-lg bg-white/30 backdrop-blur-xl shadow-md hover:shadow-lg"
   >
     <h1 class="text-3xl font-light mb-2">Binary Search</h1>
     <p>
@@ -72,7 +72,7 @@
 
   <div
     id="input"
-    class="w-full mb-7 mt-5 py-6 px-3 rounded-lg bg-slate-200 shadow-md hover:shadow-lg"
+    class="w-full mb-7 mt-5 py-6 px-3 rounded-lg bg-white/30 backdrop-blur-xl shadow-md hover:shadow-lg"
   >
     <h1 class="text-3xl font-light mb-2">Input</h1>
     <p>
@@ -103,7 +103,7 @@
 
   <div
     id="demo"
-    class="w-full my-2 py-6 px-3 rounded-lg bg-slate-200 shadow-md hover:shadow-lg"
+    class="w-full my-2 py-6 px-3 rounded-lg bg-white/30 backdrop-blur-xl shadow-md hover:shadow-lg"
   >
     <h1 class="text-3xl font-light mb-2">Demonstration</h1>
     <p class="mb-5">
@@ -159,7 +159,7 @@
 
   <div
     id="conclusion"
-    class="w-full mb-7 mt-5 py-6 px-3 rounded-lg bg-slate-200 shadow-md hover:shadow-lg"
+    class="w-full mb-7 mt-5 py-6 px-3 rounded-lg bg-white/30 backdrop-blur-xl shadow-md hover:shadow-lg"
   >
     <h1 class="text-3xl font-light mb-2">Conclusion</h1>
     {#if found}

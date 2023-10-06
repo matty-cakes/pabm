@@ -9,7 +9,9 @@
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "build": "vite build",
-    "prod-deploy": "flyctl deploy"
+    "prod-deploy": "flyctl deploy",
+    "pipeline": "pnpm coverage && pnpm build && pnpm prod-deploy"
+
   },
   "keywords": [
     "app",
