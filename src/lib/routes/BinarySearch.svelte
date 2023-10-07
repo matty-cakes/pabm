@@ -9,7 +9,7 @@
   let sorted_numbers = [
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 15, 16, 17, 18, 19, 20,
   ]
-  let look_up_number = 1
+  let look_up_number = 18
   let results = []
   let found = false
 
@@ -95,7 +95,7 @@
       <input bind:value={look_up_number} class="p-2" type="text" />
     </div>
     <div class="mt-1">
-      <button on:click={submit} class="transition ease-in-out delay-10 bg-cyan-500 hover:-translate-y-.25 hover:scale-105 hover:bg-yellow-400 duration-300 text-white p-4 rounded-md "
+      <button on:click={submit} class="transition ease-in-out delay-10 bg-cyan-500 hover:-translate-y-.25 hover:scale-105 duration-300 text-white p-4 rounded-md "
         >Submit</button
       >
     </div>

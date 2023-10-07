@@ -4,8 +4,7 @@
 
 html,
 body {
-  /* font-family is only non-crucial aspect */
-  font-family: "Roboto Mono", monospace;
+  font-family: 'Poppins', sans-serif;
   height: 100vh;
   background-image: linear-gradient(
     340deg,

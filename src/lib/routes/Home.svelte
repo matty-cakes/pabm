@@ -36,7 +36,7 @@
     <h2 class="text-2xl">Alogorithms</h2>
     <ul class="list-disc px-4">
       <li>
-        <a class="font-bold" href="/binary-search" use:link>Binary Search 🔢</a>
+        <a class="text-blue-500" href="/binary-search" use:link>Binary Search 🔢</a>
       </li>
     </ul>
   </div>
