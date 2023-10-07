@@ -95,7 +95,7 @@
       <input bind:value={look_up_number} class="p-2" type="text" />
     </div>
     <div class="mt-1">
-      <button on:click={submit} class="bg-cyan-400 text-white p-4 rounded-md"
+      <button on:click={submit} class="transition ease-in-out delay-10 bg-cyan-500 hover:-translate-y-.25 hover:scale-105 hover:bg-yellow-400 duration-300 text-white p-4 rounded-md "
         >Submit</button
       >
     </div>
@@ -138,16 +138,16 @@
               {#if Number.isInteger(entry.last_window_open) && i >= entry.last_window_open && i <= entry.last_window_close}
                 {#if i === entry.current_half_way_index}
                   <div class="inline-block m-2">
-                    <NumberNode n={num} tw_bg_class="bg-green-600" />
+                    <NumberNode n={num} tw_bg_class="bg-green-600" candidate={true} choice={true} desired_item={entry.desired_item_spot == entry.current_half_way_index} />
                   </div>
                 {:else}
                   <div class="inline-block m-2">
-                    <NumberNode n={num} />
+                    <NumberNode candidate={true} n={num} />
                   </div>
                 {/if}
               {:else}
                 <div class="inline-block m-2">
-                  <NumberNode n={num} tw_bg_class="bg-black" />
+                  <NumberNode n={num} tw_bg_class="bg-black" candidate={false} />
                 </div>
               {/if}
             {/each}

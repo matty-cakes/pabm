@@ -4,13 +4,31 @@
 
 html,
 body {
-  height: 100%;
-  background: linear-gradient(
-    342deg,
+  /* font-family is only non-crucial aspect */
+  font-family: "Roboto Mono", monospace;
+  height: 100vh;
+  background-image: linear-gradient(
+    340deg,
     rgba(174, 196, 238, 1) 0%,
+    rgba(207, 167, 183, 1) 15%,
+    rgba(150, 146, 185, 1) 45%,
+    rgba(207, 167, 183, 1) 60%,
+    rgba(174, 196, 238, 1) 75%,
     rgba(207, 167, 183, 1) 100%
   );
+  background-size: 400% 400%;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  font-family: "Roboto Mono", monospace;
+  animation: gradient 60s cubic-bezier(0.78, 0.78, 0.58, 1) infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
