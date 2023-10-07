@@ -1,12 +1,10 @@
 <script>
-  import Router, { link } from "svelte-spa-router"
+  import { link } from "svelte-spa-router"
+  import InfoPane from "../components/InfoPane.svelte"
 </script>
 
 <div>
-  <div
-    id="welcome-and-introduction"
-    class="w-full mb-7 mt-5 py-6 px-5 rounded-lg bg-white/30 backdrop-blur-xl shadow-md hover:shadow-lg"
-  >
+  <InfoPane _id="welcome-and-introduction">
     <div class="flex align-middle">
       <h1 class="text-4xl self-end mr-4">PABM</h1>
       <img class="inline max-h-12" src="/pretty-robot.png" alt="pretty-robot" />
@@ -27,17 +25,16 @@
         <li>You understand the algorithm 🤞</li>
       </ul>
     </div>
-  </div>
+  </InfoPane>
 
-  <div
-    id="index"
-    class="w-full mb-7 mt-5 py-6 px-5 rounded-lg bg-white/30 backdrop-blur-xl shadow-md hover:shadow-lg"
-  >
+  <InfoPane _id="index">
     <h2 class="text-2xl">Alogorithms</h2>
     <ul class="list-disc px-4">
       <li>
-        <a class="text-blue-500" href="/binary-search" use:link>Binary Search 🔢</a>
+        <a class="text-blue-500" href="/binary-search" use:link
+          >Binary Search 🔢</a
+        >
       </li>
     </ul>
-  </div>
+  </InfoPane>
 </div>

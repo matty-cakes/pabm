@@ -5,6 +5,7 @@
   import { onMount } from "svelte"
   import binary_search from "../algorithms/binary_search"
   import NumberNode from "../components/NumberNode.svelte"
+  import InfoPane from "../components/InfoPane.svelte"
 
   let sorted_numbers = [
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 15, 16, 17, 18, 19, 20,
@@ -57,23 +58,17 @@
 </script>
 
 <div>
-  <div
-    id="introduction"
-    class="w-full mb-7 mt-5 py-6 px-3 rounded-lg bg-white/30 backdrop-blur-xl shadow-md hover:shadow-lg"
-  >
+  <InfoPane _id="introduction">
     <h1 class="text-3xl font-light mb-2">Binary Search</h1>
     <p>
-      Binary search is a searching algorthim that attempts to narrow down the
+      Binary search is a searching algorithm that attempts to narrow down the
       placement of an item in sorted list by successively searching at the
       center of collection and determining by half the size each iteration how
       close the current mid-way point is to the desired item.
     </p>
-  </div>
+  </InfoPane>
 
-  <div
-    id="input"
-    class="w-full mb-7 mt-5 py-6 px-3 rounded-lg bg-white/30 backdrop-blur-xl shadow-md hover:shadow-lg"
-  >
+  <InfoPane _id="input">
     <h1 class="text-3xl font-light mb-2">Input</h1>
     <p>
       The following fields allow you to interact with the algorithm. In the
@@ -95,16 +90,15 @@
       <input bind:value={look_up_number} class="p-2" type="text" />
     </div>
     <div class="mt-1">
-      <button on:click={submit} class="transition ease-in-out delay-10 bg-cyan-500 hover:-translate-y-.25 hover:scale-105 duration-300 text-white p-4 rounded-md "
+      <button
+        on:click={submit}
+        class="transition ease-in-out delay-10 bg-cyan-500 hover:-translate-y-.25 hover:scale-105 duration-300 text-white p-4 rounded-md"
         >Submit</button
       >
     </div>
-  </div>
+  </InfoPane>
 
-  <div
-    id="demo"
-    class="w-full my-2 py-6 px-3 rounded-lg bg-white/30 backdrop-blur-xl shadow-md hover:shadow-lg"
-  >
+  <InfoPane _id="demo">
     <h1 class="text-3xl font-light mb-2">Demonstration</h1>
     <p class="mb-5">
       In the following case we want to find the placement of the value <NumberNode
@@ -127,8 +121,6 @@
 
     <div class="px-12">
       {#each results as entry}
-        <!-- <pre>{JSON.stringify(entry, null, 2)}</pre> -->
-
         <div id="data" class="flex-col mt-7 pb-6 bg-slate-600 rounded-md">
           <div class="p-1 text-slate-200">
             <small>Step: {entry.count + 1}</small>
@@ -138,7 +130,14 @@
               {#if Number.isInteger(entry.last_window_open) && i >= entry.last_window_open && i <= entry.last_window_close}
                 {#if i === entry.current_half_way_index}
                   <div class="inline-block m-2">
-                    <NumberNode n={num} tw_bg_class="bg-green-600" candidate={true} choice={true} desired_item={entry.desired_item_spot == entry.current_half_way_index} />
+                    <NumberNode
+                      n={num}
+                      tw_bg_class="bg-green-600"
+                      candidate={true}
+                      choice={true}
+                      desired_item={entry.desired_item_spot ==
+                        entry.current_half_way_index}
+                    />
                   </div>
                 {:else}
                   <div class="inline-block m-2">
@@ -147,7 +146,11 @@
                 {/if}
               {:else}
                 <div class="inline-block m-2">
-                  <NumberNode n={num} tw_bg_class="bg-black" candidate={false} />
+                  <NumberNode
+                    n={num}
+                    tw_bg_class="bg-black"
+                    candidate={false}
+                  />
                 </div>
               {/if}
             {/each}
@@ -155,12 +158,9 @@
         </div>
       {/each}
     </div>
-  </div>
+  </InfoPane>
 
-  <div
-    id="conclusion"
-    class="w-full mb-7 mt-5 py-6 px-3 rounded-lg bg-white/30 backdrop-blur-xl shadow-md hover:shadow-lg"
-  >
+  <InfoPane _id="conclusion">
     <h1 class="text-3xl font-light mb-2">Conclusion</h1>
     {#if found}
       <p>
@@ -176,5 +176,5 @@
         in the collection.
       </p>
     {/if}
-  </div>
+  </InfoPane>
 </div>

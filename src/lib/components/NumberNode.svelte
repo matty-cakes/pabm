@@ -1,10 +1,10 @@
 <script>
   export let n
   export let tw_bg_class = "bg-cyan-500"
+  export let tw_text_class = "text-white"
   export let candidate = true
   export let choice = false
   export let desired_item = false
-  export let tw_text_class = "text-white"
 
   let node_type
 
@@ -16,9 +16,6 @@
   } else {
     node_type="disqualified_node"
   }
-
-  const tada =  desired_item ? "🎉" : ""
-
 
 </script>
 
