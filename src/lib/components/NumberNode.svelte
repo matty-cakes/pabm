@@ -9,76 +9,108 @@
   let node_type
 
   if (candidate) {
-    node_type="candidate_node"
+    node_type = "candidate_node"
     if (choice) {
-    node_type="choice_node"
-  }
+      node_type = "choice_node"
+    }
   } else {
-    node_type="disqualified_node"
+    node_type = "disqualified_node"
   }
-
 </script>
 
-<span class="inline-block" >
-  <span id="{node_type}"
-  class=" flex justify-center items-center w-[2.5rem] h-[2.5rem] text-center p-1 rounded-full text-center {tw_bg_class} {tw_text_class} hover:shadow-xl hover:font-bold"
->
-  {n}{#if desired_item}<span id="desired_item_party" class=" absolute w-6 h-6 mb-10 ml-7 text-center p-1 rounded-full">{"🎉"}</span>{/if}
+<span class="inline-block">
+  <span
+    id={node_type}
+    class="node flex justify-center items-center w-[2.5rem] h-[2.5rem] text-center p-1 rounded-full text-center {tw_bg_class} {tw_text_class} hover:shadow-xl hover:font-bold"
+  >
+    {n}{#if desired_item}<span
+        id="desired_item_party"
+        class=" absolute w-6 h-6 mb-10 ml-7 text-center p-1 rounded-full"
+        >{"🎉"}</span
+      >{/if}
+  </span>
 </span>
-</span>
-
 
 <style>
+  .node:hover {
+    animation: rock 1s linear infinite;
+  }
+
+  @keyframes rock {
+    0% {
+      transform: rotate(10deg);
+    }
+
+    25% {
+      transform: rotate(45deg);
+    }
+
+    50% {
+      transform: rotate(-10deg);
+    }
+
+    66% {
+      transform: rotate(-45deg);
+    }
+
+    100% {
+      transform: rotate(10deg);
+    }
+  }
   #candidate_node {
     background-image: linear-gradient(
-    45deg,
-    rgb(95, 223, 237) 0%,
-    rgb(123, 197, 234) 100%
-  );
+      45deg,
+      rgb(95, 223, 237) 0%,
+      rgb(123, 197, 234) 100%
+    );
   }
 
   #disqualified_node {
     background-image: linear-gradient(
-    45deg,
-    rgb(0,0,0) 0%,
-    rgb(61, 44, 70)  15%,
-    rgb(0,0,0) 45%,
-    rgb(61, 44, 70)  60%,
-    rgb(0,0,0) 75%,
-    rgb(61, 44, 70) 100%
-  );
+      45deg,
+      rgb(0, 0, 0) 0%,
+      rgb(61, 44, 70) 15%,
+      rgb(0, 0, 0) 45%,
+      rgb(61, 44, 70) 60%,
+      rgb(0, 0, 0) 75%,
+      rgb(61, 44, 70) 100%
+    );
   }
 
   #choice_node {
     background-image: linear-gradient(
-    -50deg,
-    rgb(72, 171, 87) 0%,
-    rgb(50, 125, 100)100%
-  );
-  background-size: 400% 400%;
-  animation: gradient 5s ease infinite;
+      -50deg,
+      rgb(72, 171, 87) 0%,
+      rgb(50, 125, 100) 100%
+    );
+    background-size: 300% 300%;
+    animation: gradient 1.5s ease infinite;
   }
-  
+
+  #choice_node:hover {
+    animation:
+      gradient 5s ease infinite,
+      rock 1s linear infinite;
+  }
 
   @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 
-#desired_item_party {
-  transition: all .75s ease;
-}
+  #desired_item_party {
+    transition: all 1s ease;
+  }
 
-span:hover #desired_item_party {
-  font-size: 2rem;
-  margin-bottom: 5rem;
-}
-
+  span:hover #desired_item_party {
+    font-size: 2rem;
+    margin-bottom: 5rem;
+  }
 </style>

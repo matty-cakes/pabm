@@ -22,6 +22,8 @@
   onMount(() => {
     results = binary_search(displayed_sorted_numbers, displayed_look_up_number)
     found = Number.isInteger(results[results.length - 1].desired_item_spot)
+    displayed_results = results
+    displayed_found = found
     debug_log(`The result is: ${results[results.length - 1].desired_item_spot}`)
   })
 
@@ -77,17 +79,21 @@
       insert a number you want to algorithm to search for. Ex: "2".
     </p>
     <div class="my-4">
-      <label for="sorted_numbers">Sorted Numbers:</label>
+      <label class="block" for="sorted_numbers">Sorted Numbers:</label>
       <input
         id="sorted_numbers"
-        class="p-2 w-1/2"
+        class="block p-3 w-full md:w-1/2 rounded-sm bg-white/70 backdrop-blur-xl"
         type="text"
         bind:value={sorted_numbers}
       />
     </div>
     <div class="my-4">
-      <label for="number_to_find">Number To Find:</label>
-      <input bind:value={look_up_number} class="p-2" type="text" />
+      <label class="block" for="number_to_find">Number To Find:</label>
+      <input
+        bind:value={look_up_number}
+        class="block p-3 w-full md:w-1/2 rounded-sm bg-white/70 backdrop-blur-xl"
+        type="number"
+      />
     </div>
     <div class="mt-1">
       <button
@@ -120,7 +126,7 @@
     </div>
 
     <div class="px-12">
-      {#each results as entry}
+      {#each displayed_results as entry}
         <div id="data" class="flex-col mt-7 pb-6 bg-slate-600 rounded-md">
           <div class="p-1 text-slate-200">
             <small>Step: {entry.count + 1}</small>
@@ -162,12 +168,12 @@
 
   <InfoPane _id="conclusion">
     <h1 class="text-3xl font-light mb-2">Conclusion</h1>
-    {#if found}
+    {#if displayed_found}
       <p>
         The value <span class="font-bold">{look_up_number}</span> was found at
         index
         <span class="font-bold"
-          >{results[results.length - 1].desired_item_spot}</span
+          >{displayed_results[displayed_results.length - 1].desired_item_spot}</span
         >
       </p>
     {:else}

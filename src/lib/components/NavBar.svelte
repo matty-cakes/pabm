@@ -11,7 +11,12 @@
       href="/"
     >
       <h2 class="ml-3 text-2xl">
-        <img id="pretty-robot" class="max-h-9" src="/pretty-robot.png" alt="pretty-robot" />
+        <img
+          id="pretty-robot"
+          class="max-h-9"
+          src="/pretty-robot.png"
+          alt="pretty-robot"
+        />
       </h2>
     </a>
     <nav class="flex flex-wrap items-center justify-center">
@@ -22,11 +27,10 @@
 </header>
 
 <style>
-
-#pretty-robot{
-  transition:.5s ease-in-out;
-}
+  #pretty-robot {
+    transition: 0.45s ease-in-out;
+  }
   #pretty-robot:hover {
-    transform: rotate(45deg);
+    transform: rotate(360deg);
   }
 </style>

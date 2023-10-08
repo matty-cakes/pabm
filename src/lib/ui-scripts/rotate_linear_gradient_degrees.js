@@ -13,7 +13,7 @@ const incrementDeg = (deg) => {
     return deg
   }
   return 2
-} 
+}
 
 // Oh so much hack
 const getCurrentDeg = (s) => {
@@ -24,44 +24,49 @@ const getCurrentDeg = (s) => {
 
 // Oh so much hack
 const getCurrentRGB = (s) => {
-  console.log(s);
+  console.log(s)
   const parts = s.split("deg,")
-  console.log(parts);
+  console.log(parts)
   const onlyRGBBlob = parts[1].replace(");", "").trim()
   return onlyRGBBlob
 }
 
-const createNewLinearGradient = (deg, rgb_set) => `linear-gradient(${deg}deg, ${rgb_set}`
+const createNewLinearGradient = (deg, rgb_set) =>
+  `linear-gradient(${deg}deg, ${rgb_set}`
 
-const getStylesById = (id, filter = ALL) => getStyles(document.getElementById(id), filter)
+const getStylesById = (id, filter = ALL) =>
+  getStyles(document.getElementById(id), filter)
 
 const getStyles = (elem, filter) => {
   if (!elem) {
     console.log("caller attempted to get styles for unknown element")
     return []
-  } 
-  
+  }
+
   const styleNodes = []
-  const win = document.defaultView 
-  const style = win.getComputedStyle(elem, '')
+  const win = document.defaultView
+  const style = win.getComputedStyle(elem, "")
 
   // Style is looped this way because it isn't a "real" collection
-  for (let i=0; i < style.length; i++) {
-    if(filter === ALL || filter === style[i]) {
-      styleNodes.push({[style[i]]: style.getPropertyValue(style[i])})
+  for (let i = 0; i < style.length; i++) {
+    if (filter === ALL || filter === style[i]) {
+      styleNodes.push({ [style[i]]: style.getPropertyValue(style[i]) })
     }
   }
 
   return styleNodes
 }
 
-const getCurrentImage = () => getStylesById("body", "background-image")[0]["background-image"]
+const getCurrentImage = () =>
+  getStylesById("body", "background-image")[0]["background-image"]
 
 const setStyle = (elem, filter, value) => {
   if (!elem || !filter) {
-    console.log("caller attempted to get styles for unknown element or unknown style")
+    console.log(
+      "caller attempted to get styles for unknown element or unknown style",
+    )
     return []
-  }   
+  }
   elem.style[filter] = value
 }
 

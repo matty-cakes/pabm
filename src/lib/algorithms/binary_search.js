@@ -7,11 +7,11 @@ const get_half_way_index = (l, window_open, window_close) => {
       return 0
     }
 
-    let mid = Math.floor((window_open + window_close) / 2)
+    const mid = Math.floor((window_open + window_close) / 2)
     debug_log(
       `The mid point of (${window_open} + ${window_close} = ${
         window_open + window_close
-      }) is ${mid}`
+      }) is ${mid}`,
     )
     return mid
   }
@@ -26,7 +26,7 @@ const create_result_entry = (
   window_open,
   window_close,
   desired_item_spot,
-  at_end_of_step
+  at_end_of_step,
 ) => {
   const entry = {
     count,
@@ -58,12 +58,12 @@ const binary_search = (sorted_items, desired_item_value) => {
     current_half_way_index = get_half_way_index(
       sorted_items,
       window_open,
-      window_close
+      window_close,
     )
     current_half_way_value = sorted_items[current_half_way_index]
 
     debug_log(
-      `The current_half_way_index is ${current_half_way_index}, and the current_half_way_value is ${current_half_way_value}`
+      `The current_half_way_index is ${current_half_way_index}, and the current_half_way_value is ${current_half_way_value}`,
     )
 
     last_window_open = window_open
@@ -72,17 +72,17 @@ const binary_search = (sorted_items, desired_item_value) => {
     if (current_half_way_value < desired_item_value) {
       window_open = current_half_way_index
       debug_log(
-        `Since the The current_half_way_value (${current_half_way_value}) is less than the desired_item_value (${desired_item_value}) we will change the window_open to be the current_half_way_index ${current_half_way_index}`
+        `Since the The current_half_way_value (${current_half_way_value}) is less than the desired_item_value (${desired_item_value}) we will change the window_open to be the current_half_way_index ${current_half_way_index}`,
       )
     } else if (current_half_way_value > desired_item_value) {
       window_close = current_half_way_index
       debug_log(
-        `Since the The current_half_way_value (${current_half_way_value}) is greater than the desired_item_value (${desired_item_value}) we will change the window_close to be the current_half_way_index ${current_half_way_index}`
+        `Since the The current_half_way_value (${current_half_way_value}) is greater than the desired_item_value (${desired_item_value}) we will change the window_close to be the current_half_way_index ${current_half_way_index}`,
       )
     } else {
       desired_item_spot = current_half_way_index
       debug_log(
-        `The desired spot and the half way spot is ${desired_item_spot}`
+        `The desired spot and the half way spot is ${desired_item_spot}`,
       )
     }
 
@@ -96,8 +96,8 @@ const binary_search = (sorted_items, desired_item_value) => {
         window_open,
         window_close,
         desired_item_spot,
-        true
-      )
+        true,
+      ),
     )
     count = count + 1
 
