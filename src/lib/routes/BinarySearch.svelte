@@ -173,7 +173,8 @@
         The value <span class="font-bold">{look_up_number}</span> was found at
         index
         <span class="font-bold"
-          >{displayed_results[displayed_results.length - 1].desired_item_spot}</span
+          >{displayed_results[displayed_results.length - 1]
+            .desired_item_spot}</span
         >
       </p>
     {:else}

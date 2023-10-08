@@ -9,9 +9,9 @@
     "fmt": "prettier . --write --plugin prettier-plugin-svelte .",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "build": "vite build",
+    "build": "pnpm fmt && pnpm coverage && vite build",
     "prod-deploy": "flyctl deploy",
-    "pipeline": "pnpm coverage && pnpm build && pnpm prod-deploy",
+    "pipeline": "pnpm fmt && pnpm coverage && pnpm build && pnpm prod-deploy",
     "pipe": "pnpm pipeline"
   },
   "keywords": [
