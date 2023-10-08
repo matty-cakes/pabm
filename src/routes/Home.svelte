@@ -1,6 +1,6 @@
 <script>
   import { link } from "svelte-spa-router"
-  import InfoPane from "../components/InfoPane.svelte"
+  import InfoPane from "../common/components/InfoPane.svelte"
 </script>
 
 <div>

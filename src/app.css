@@ -5,7 +5,7 @@
 html,
 body {
   font-family: "Raleway", sans-serif;
-  height: 100vh;
+  height: 100%;
   background-image: linear-gradient(
     340deg,
     rgba(174, 196, 238, 1) 0%,
@@ -15,8 +15,8 @@ body {
     rgba(174, 196, 238, 1) 75%,
     rgba(207, 167, 183, 1) 100%
   );
-  background-size: 400% 400%;
-  background-repeat: no-repeat;
+  background-size: 1000% 1000%;
+  background-repeat: space;
   animation: gradient 60s cubic-bezier(0.78, 0.78, 0.58, 1) infinite;
 }
 

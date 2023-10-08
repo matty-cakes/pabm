@@ -62,6 +62,20 @@ const binary_search = (sorted_items, desired_item_value) => {
     )
     current_half_way_value = sorted_items[current_half_way_index]
 
+    results.push(
+      create_result_entry(
+        count,
+        current_half_way_index,
+        current_half_way_value,
+        last_window_open,
+        last_window_close,
+        window_open,
+        window_close,
+        desired_item_spot,
+        true,
+      ),
+    )
+
     debug_log(
       `The current_half_way_index is ${current_half_way_index}, and the current_half_way_value is ${current_half_way_value}`,
     )

@@ -2,13 +2,13 @@
   import Router, { link } from "svelte-spa-router"
 
   // Shared Layout Components
-  import NavBar from "./lib/components/NavBar.svelte"
+  import NavBar from "./common/components/NavBar.svelte"
 
   // Routes
-  import Home from "./lib/routes/Home.svelte"
-  import NotFound from "./lib/routes/NotFound.svelte"
-  import BinarySearch from "./lib/routes/BinarySearch.svelte"
-  import About from "./lib/routes/About.svelte"
+  import Home from "./routes/Home.svelte"
+  import NotFound from "./routes/NotFound.svelte"
+  import BinarySearch from "./routes/BinarySearch.svelte"
+  import About from "./routes/About.svelte"
 
   const routes = {
     "/": Home,
