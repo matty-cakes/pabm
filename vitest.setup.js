@@ -1,3 +1,2 @@
-import * as matchers from "vitest-dom/matchers"
-import { expect } from "vitest"
-expect.extend(matchers)
+// Make matchers available in all tests
+import "@testing-library/jest-dom/vitest"

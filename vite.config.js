@@ -3,10 +3,10 @@ import { svelte } from "@sveltejs/vite-plugin-svelte"
 import postcss from "./postcss.config.js"
 
 export default defineConfig({
-  plugins: [svelte({ hot: !process.env.VITEST })],
+  plugins: [svelte()],
   resolve: {
     alias: {
-      "~": "./src",
+      "~": new URL("./src/", import.meta.url).pathname,
     },
   },
   publicDir: "src/public",
@@ -19,6 +19,7 @@ export default defineConfig({
   test: {
     globals: true,
     environment: "jsdom",
-    reporters: [["default"], ["html", { outputFile: ".html" }]],
+    setupFiles: ["vitest.setup.js"],
+    reporters: ["default"],
   },
 })

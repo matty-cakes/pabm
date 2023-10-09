@@ -1,7 +1,5 @@
 <script>
   import InfoPane from "~/common/components/InfoPane.svelte"
-  import NumberNode from "~/common/components/NumberNode.svelte"
-
   export let displayed_look_up_number = undefined
   export let displayed_found = false
   export let displayed_results = []

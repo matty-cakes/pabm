@@ -33,8 +33,6 @@ body {
 }
 
 ::selection {
-  /* background: rgb(242, 242, 161);
-  text-decoration: underline; */
   background-color: rgb(63, 56, 67);
   color: white;
 }
