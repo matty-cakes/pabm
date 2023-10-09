@@ -21,7 +21,7 @@
 <span class="inline-block">
   <span
     id={node_type}
-    class="node flex justify-center items-center w-[2.5rem] h-[2.5rem] text-center p-1 rounded-full text-center {tw_bg_class} {tw_text_class} hover:shadow-xl hover:font-bold"
+    class="node flex justify-center items-center w-[2.5rem] h-[2.5rem] text-center p-1 rounded-full {tw_bg_class} {tw_text_class} hover:shadow-xl hover:font-bold"
   >
     {n}{#if desired_item}<span
         id="desired_item_party"
@@ -89,9 +89,7 @@
   }
 
   #choice_node:hover {
-    animation:
-      gradient 5s ease infinite,
-      rock 1s linear infinite;
+    animation: gradient 5s ease infinite, rock 1s linear infinite;
   }
 
   @keyframes gradient {
