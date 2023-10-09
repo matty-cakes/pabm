@@ -7,8 +7,8 @@
   "scripts": {
     "dev": "vite",
     "fmt": "prettier . --write --plugin prettier-plugin-svelte .",
-    "style-lint": "stylelint '**/*.{css,svelte}'",
-    "style-fix": "stylelint --fix '**/*.{css,svelte}'",
+    "style-lint": "stylelint './src/**/*.{css,svelte}'",
+    "style-fix": "stylelint --fix './src/**/*.{css,svelte}'",
     "test": "vitest run",
     "coverage": "vitest run --coverage",
     "build": "pnpm fmt && pnpm coverage && vite build",
