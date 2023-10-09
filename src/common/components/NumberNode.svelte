@@ -57,31 +57,32 @@
       transform: rotate(10deg);
     }
   }
+
   #candidate_node {
     background-image: linear-gradient(
       45deg,
-      rgb(95, 223, 237) 0%,
-      rgb(123, 197, 234) 100%
+      rgb(95 223 237) 0%,
+      rgb(123 197 234) 100%
     );
   }
 
   #disqualified_node {
     background-image: linear-gradient(
       45deg,
-      rgb(0, 0, 0) 0%,
-      rgb(61, 44, 70) 15%,
-      rgb(0, 0, 0) 45%,
-      rgb(61, 44, 70) 60%,
-      rgb(0, 0, 0) 75%,
-      rgb(61, 44, 70) 100%
+      rgb(0 0 0) 0%,
+      rgb(61 44 70) 15%,
+      rgb(0 0 0) 45%,
+      rgb(61 44 70) 60%,
+      rgb(0 0 0) 75%,
+      rgb(61 44 70) 100%
     );
   }
 
   #choice_node {
     background-image: linear-gradient(
       -50deg,
-      rgb(72, 171, 87) 0%,
-      rgb(50, 125, 100) 100%
+      rgb(72 171 87) 0%,
+      rgb(50 125 100) 100%
     );
     background-size: 300% 300%;
     animation: gradient 1.5s ease infinite;
@@ -97,9 +98,11 @@
     0% {
       background-position: 0% 50%;
     }
+
     50% {
       background-position: 100% 50%;
     }
+
     100% {
       background-position: 0% 50%;
     }

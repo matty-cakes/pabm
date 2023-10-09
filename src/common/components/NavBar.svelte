@@ -30,6 +30,7 @@
   #pretty-robot {
     transition: 0.45s ease-in-out;
   }
+
   #pretty-robot:hover {
     transform: rotate(360deg);
   }
