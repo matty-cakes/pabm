@@ -9,12 +9,12 @@
   let node_type
 
   if (candidate) {
-    node_type = "candidate_node"
+    node_type = "candidate-node"
     if (choice) {
-      node_type = "choice_node"
+      node_type = "choice-node"
     }
   } else {
-    node_type = "disqualified_node"
+    node_type = "disqualified-node"
   }
 </script>
 
@@ -24,7 +24,7 @@
     class="node flex justify-center items-center w-[2.5rem] h-[2.5rem] text-center p-1 rounded-full {tw_bg_class} {tw_text_class} hover:shadow-xl hover:font-bold"
   >
     {n}{#if desired_item}<span
-        id="desired_item_party"
+        id="desired-item-party"
         class=" absolute w-6 h-6 mb-10 ml-7 text-center p-1 rounded-full"
         >{"🎉"}</span
       >{/if}
@@ -58,7 +58,7 @@
     }
   }
 
-  #candidate_node {
+  #candidate-node {
     background-image: linear-gradient(
       45deg,
       rgb(95 223 237) 0%,
@@ -66,7 +66,7 @@
     );
   }
 
-  #disqualified_node {
+  #disqualified-node {
     background-image: linear-gradient(
       45deg,
       rgb(0 0 0) 0%,
@@ -78,7 +78,7 @@
     );
   }
 
-  #choice_node {
+  #choice-node {
     background-image: linear-gradient(
       -50deg,
       rgb(72 171 87) 0%,
@@ -88,7 +88,7 @@
     animation: gradient 1.5s ease infinite;
   }
 
-  #choice_node:hover {
+  #choice-node:hover {
     animation: gradient 5s ease infinite, rock 1s linear infinite;
   }
 
@@ -106,11 +106,11 @@
     }
   }
 
-  #desired_item_party {
+  #desired-item-party {
     transition: all 1s ease;
   }
 
-  span:hover #desired_item_party {
+  span:hover #desired-item-party {
     font-size: 2rem;
     margin-bottom: 5rem;
   }
