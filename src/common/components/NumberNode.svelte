@@ -89,7 +89,9 @@
   }
 
   #choice-node:hover {
-    animation: gradient 5s ease infinite, rock 1s linear infinite;
+    animation:
+      gradient 5s ease infinite,
+      rock 1s linear infinite;
   }
 
   @keyframes gradient {
