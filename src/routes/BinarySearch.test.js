@@ -9,5 +9,5 @@ test("shows correct titles for panes", () => {
   const demo = screen.getByText(/Demonstration/)
   const conclusion = screen.getByText(/Conclusion/)
   const titles = [heading, input, demo, conclusion]
-  titles.forEach((f) => expect(f).toBeInTheDocument())
+  titles.forEach((f) => expect(f).toBeVisible())
 })

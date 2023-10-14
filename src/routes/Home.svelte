@@ -35,6 +35,11 @@
           >Binary Search 🔢</a
         >
       </li>
+      <li>
+        <a class="text-blue-500" href="/selection-sort" use:link
+          >Selection Sort ⌛️</a
+        >
+      </li>
     </ul>
   </InfoPane>
 </div>

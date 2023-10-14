@@ -7,13 +7,15 @@
   // Routes
   import Home from "./routes/Home.svelte"
   import NotFound from "./routes/NotFound.svelte"
-  import BinarySearch from "./routes/BinarySearch.svelte"
   import About from "./routes/About.svelte"
+  import BinarySearch from "./routes/BinarySearch.svelte"
+  import SelectionSort from "./routes/SelectionSort.svelte"
 
   const routes = {
     "/": Home,
     "/about": About,
     "/binary-search": BinarySearch,
+    "/selection-sort": SelectionSort,
     // Catch-all - This is optional, but if present it must be the last
     "*": NotFound,
   }
