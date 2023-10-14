@@ -72,7 +72,7 @@ const binary_search = (sorted_items, desired_item_value) => {
         window_open,
         window_close,
         desired_item_spot,
-        true,
+        false,
       ),
     )
 

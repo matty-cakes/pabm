@@ -1,5 +1,5 @@
 <script>
-  const DEBUG = false
+  const DEBUG = true
   const debug_log = (v) => (DEBUG ? console.log(v) : null)
 
   import binary_search from "~/lib/algorithms/binary_search.js"
@@ -17,7 +17,7 @@
 
   let displayed_sorted_numbers = sorted_numbers
   let displayed_look_up_number = look_up_number
-  let displayed_results = results
+  let displayed_results = results.filter((r) => r.at_end_of_step)
   let displayed_found = found
 
   const isSorted = (arr) => arr.every((v, i, a) => !i || a[i - 1] <= v)
@@ -48,7 +48,7 @@
 
     displayed_sorted_numbers = sorted_numbers
     displayed_look_up_number = look_up_number
-    displayed_results = results
+    displayed_results = results.filter((r) => r.at_end_of_step)
     displayed_found = found
   }
 </script>
