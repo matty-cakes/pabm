@@ -4,7 +4,10 @@
 
   import selection_sort from "~/lib/algorithms/selection_sort.js"
   import { isNumbers, isSorted } from "~/lib/util/validators.js"
-  import InfoPane from "~/common/components/InfoPane.svelte"
+  import Demo from "~/routes/components/SelectionSort/Demo.svelte"
+  import Conclusion from "~/routes/components/SelectionSort/Conclusion.svelte"
+  import Introduction from "~/routes/components/SelectionSort/Introduction.svelte"
+  import Input from "~/routes/components/SelectionSort/Input.svelte"
 
   let unsorted_numbers = [45, 59, 12, 87]
   let results = selection_sort(unsorted_numbers)
@@ -17,8 +20,7 @@
   }
 </script>
 
-<InfoPane _id="introduction">
-  <h1 class="text-3xl font-light mb-2">SELECTION SORT</h1>
-  <h2>Results</h2>
-  <pre>{JSON.stringify(displayed_results, null, 2)}</pre>
-</InfoPane>
+<div>
+  <Introduction />
+  <Demo {displayed_results} />
+</div>
