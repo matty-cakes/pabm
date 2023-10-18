@@ -17,7 +17,7 @@ body {
   );
   background-size: 1000% 1000%;
   background-repeat: space;
-  animation: gradient 60s cubic-bezier(0.78, 0.78, 0.58, 1) infinite;
+  animation: gradient 80s cubic-bezier(0.78, 0.78, 0.58, 1) infinite;
 }
 
 @keyframes gradient {
