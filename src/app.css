@@ -8,12 +8,12 @@ body {
   height: 100%;
   background-image: linear-gradient(
     340deg,
-    rgb(174 196 238 / 100%) 0%,
-    rgb(207 167 183 / 100%) 15%,
+    rgb(185 238 174) 0%,
+    rgb(120 75 93) 15%,
     rgb(150 146 185 / 100%) 45%,
     rgb(207 167 183 / 100%) 60%,
-    rgb(174 196 238 / 100%) 75%,
-    rgb(207 167 183 / 100%) 100%
+    rgb(238 237 174) 75%,
+    rgb(64 125 128) 100%
   );
   background-size: 1000% 1000%;
   background-repeat: space;
