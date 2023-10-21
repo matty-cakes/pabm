@@ -30,7 +30,11 @@
 
   <div class="px-12">
     {#each displayed_results as entry}
-      <div id="data" class="flex-col mt-7 pb-6 bg-slate-600 rounded-md">
+      <div
+        id="data"
+        data-testid="result-entry"
+        class="flex-col mt-7 pb-6 bg-slate-600 rounded-md"
+      >
         <div class="p-1 text-slate-200">
           <small>Step: {entry.count + 1}</small>
         </div>

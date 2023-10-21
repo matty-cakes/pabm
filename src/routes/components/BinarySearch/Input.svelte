@@ -7,7 +7,18 @@
   export let look_up_number = undefined
   export let sorted_numbers = []
   export let submit = () =>
-    dispatch("submit", { look_up_number, sorted_numbers })
+    dispatch("submit", {
+      look_up_number,
+      sorted_numbers,
+      _type: "submit",
+    })
+
+  export let submit_interactive = () =>
+    dispatch("submit", {
+      look_up_number,
+      sorted_numbers,
+      _type: "submit-interactive",
+    })
 </script>
 
 <InfoPane _id="input">
@@ -30,6 +41,7 @@
   <div class="my-4">
     <label class="block" for="number_to_find">Number To Find:</label>
     <input
+      id="number_to_find"
       bind:value={look_up_number}
       class="block p-3 w-full md:w-1/2 rounded-sm bg-white/70 backdrop-blur-xl"
       type="number"
@@ -38,8 +50,13 @@
   <div class="mt-1">
     <button
       on:click={submit}
-      class="transition ease-in-out delay-10 bg-cyan-500 hover:-translate-y-.25 hover:scale-105 duration-300 text-white p-4 rounded-md"
+      class="transition ease-in-out delay-10 bg-cyan-500 hover:-translate-y-.25 hover:scale-105 duration-300 text-white mr-2 p-4 rounded-md"
       >Submit</button
+    >
+    <button
+      on:click={submit_interactive}
+      class="transition ease-in-out delay-10 bg-rose-500 hover:-translate-y-.25 hover:scale-105 duration-300 text-white p-4 rounded-md"
+      >Submit Interactive</button
     >
   </div>
 </InfoPane>

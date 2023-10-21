@@ -8,7 +8,7 @@
 <InfoPane _id="conclusion">
   <h1 class="text-3xl font-light mb-2">Conclusion</h1>
   {#if displayed_found}
-    <p>
+    <p data-testid="value-found-conclusion">
       The value <span class="font-bold">{displayed_look_up_number}</span> was
       found at index
       <span class="font-bold"
@@ -17,7 +17,7 @@
       >
     </p>
   {:else}
-    <p>
+    <p data-testid="value-not-found-conclusion">
       The value {displayed_look_up_number} was found
       <span class="font-bold">not</span> found in the collection.
     </p>

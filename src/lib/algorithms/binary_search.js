@@ -48,7 +48,7 @@ const binary_search = (sorted_items, desired_item_value) => {
 
   let count = 0
   let window_open = 0
-  let window_close = sorted_items.length
+  let window_close = sorted_items.length - 1
   let last_window_open = null
   let last_window_close = null
   let current_half_way_index = null

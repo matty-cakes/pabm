@@ -8,9 +8,9 @@ test("binary_search", () => {
 })
 
 test("binary_search with at least 3 steps", () => {
-  const results = binary_search([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 7)
+  const results = binary_search([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 8)
   const results_final_entry = results[results.length - 1]
-  expect(results_final_entry.desired_item_spot).toBe(6)
+  expect(results_final_entry.desired_item_spot).toBe(7)
   expect(results.length).toBe(6)
 })
 
