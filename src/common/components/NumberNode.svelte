@@ -21,7 +21,7 @@
 <span class="inline-block">
   <span
     id={node_type}
-    class="node flex justify-center items-center w-[2.5rem] h-[2.5rem] text-center p-1 rounded-full {tw_bg_class} {tw_text_class} hover:shadow-xl hover:font-bold"
+    class="node flex justify-center items-center w-[1.5rem] h-[1.5rem] md:w-[2.5rem] md:h-[2.5rem] text-center text-sm md:text-base md:p-1 rounded-full {tw_bg_class} {tw_text_class} hover:shadow-xl hover:font-bold"
   >
     {n}{#if desired_item}<span
         id="desired-item-party"
