@@ -8,7 +8,7 @@
 
   const final_step_count = displayed_results.reduce(
     (acc, current) => Math.max(acc, current.count),
-    0,
+    0
   )
 
   let current_entry_index = 0
@@ -96,7 +96,7 @@
     />
     in the collection:
   </p>
-  <div class="px-12">
+  <div class="px-1 md:px-12">
     <div id="data" class="flex-col pb-6 bg-slate-600 rounded-sm">
       <div class="p-1 text-slate-200">
         <small>Starting Collection</small>
@@ -109,7 +109,7 @@
     </div>
   </div>
 
-  <div class="px-12">
+  <div class="px-1 md:px-12">
     {#each displayed_results as entry, i}
       {#if current_entry_index >= i}
         <div class="mt-7">
