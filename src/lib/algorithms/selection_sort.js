@@ -1,7 +1,7 @@
 const DEBUG = false
 const debug_log = (v) => (DEBUG ? console.log(v) : null)
 
-const cheap_deep_copy = (item) => JSON.parse(JSON.stringify(item))
+export const cheap_deep_copy = (item) => JSON.parse(JSON.stringify(item))
 
 const create_step_entry = (
   starting_current_largest,

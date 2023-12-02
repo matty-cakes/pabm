@@ -2,19 +2,23 @@
   export let n
   export let tw_bg_class = "bg-cyan-500"
   export let tw_text_class = "text-white"
+  export let is_search = false
   export let candidate = true
   export let choice = false
   export let desired_item = false
 
   let node_type
 
-  if (candidate) {
-    node_type = "candidate-node"
-    if (choice) {
-      node_type = "choice-node"
+  // Hack NumberNode needs refactor for both search and sort flexiblity
+  if (!is_search) {
+    if (candidate) {
+      node_type = "candidate-node"
+      if (choice) {
+        node_type = "choice-node"
+      }
+    } else {
+      node_type = "disqualified-node"
     }
-  } else {
-    node_type = "disqualified-node"
   }
 </script>
 
@@ -25,8 +29,7 @@
   >
     {n}{#if desired_item}<span
         id="desired-item-party"
-        class=" absolute w-6 h-6 mb-10 ml-7 text-center p-1 rounded-full"
-        >{"🎉"}</span
+        class="  w-6 h-6 mb-10 ml-7 text-center p-1 rounded-full">{"🎉"}</span
       >{/if}
   </span>
 </span>

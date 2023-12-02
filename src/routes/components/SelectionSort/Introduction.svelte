@@ -12,8 +12,4 @@
     as new set of what are now sorted numbers (highest to lowest). The process
     might looks like this:
   </p>
-  <pre>Unsorted Numbers [5,2,8] - Sorted Numbers []</pre>
-  <pre>Unsorted Numbers [5,2] - Sorted Numbers [8]</pre>
-  <pre>Unsorted Numbers [2] - Sorted Numbers [8, 5]</pre>
-  <pre>Unsorted Numbers [] - Sorted Numbers [8, 5, 2]</pre>
 </InfoPane>

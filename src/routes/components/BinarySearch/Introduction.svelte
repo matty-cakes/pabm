@@ -3,7 +3,7 @@
 </script>
 
 <InfoPane _id="introduction">
-  <h1 class="text-3xl font-light mb-2">Binary Search</h1>
+  <h1 class="text-3xl font-light mb-2">BINARY SEARCH</h1>
   <p>
     Binary search is a searching algorithm that attempts to narrow down the
     placement of an item in sorted list by successively searching at the center
